@@ -8,7 +8,9 @@ const Flex = styled(Box)({
 });
 
 export const Header = () => {
-  const { year, month, day, hour, minutes, dayOfWeek }: any = formatDate(new Date());
+  const { year, month, day, hour, minutes, dayOfWeek }: any = formatDate(
+    new Date(),
+  );
 
   return (
     <Flex>
