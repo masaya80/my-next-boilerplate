@@ -7,8 +7,6 @@ import { styled } from "@mui/system";
 import formatDate from "@/shared/utils/formatDate";
 
 
-
-
 import { FormattedDate } from "@/shared/types/formatDateType";
 
 const Flex = styled(Box)({
