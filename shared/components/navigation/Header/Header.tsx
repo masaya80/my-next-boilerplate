@@ -11,9 +11,8 @@ const Flex = styled(Box)({
 });
 
 export const Header = () => {
-  const { year, month, day, hour, minutes, dayOfWeek }:FormattedDate = formatDate(
-    new Date(),
-  );
+  const { year, month, day, hour, minutes, dayOfWeek }: FormattedDate =
+    formatDate(new Date());
 
   return (
     <Flex>

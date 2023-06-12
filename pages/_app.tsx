@@ -15,7 +15,7 @@ const clientSideEmotionCache = createEmotionCache();
 
 export type MyAppProps = {
   emotionCache?: EmotionCache;
-} & AppProps
+} & AppProps;
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;

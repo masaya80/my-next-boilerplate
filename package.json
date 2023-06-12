@@ -15,16 +15,10 @@
     "build-storybook": "storybook build",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,ts}": [
-      "lint:fix",
-      "prettier:fix",
-      "git add"
+    "*.{js,ts,tsx}": [
+      "eslint --fix shared pages",
+      "prettier -w shared pages"
     ]
   },
   "dependencies": {
@@ -60,7 +54,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.12",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^13.2.2",
     "prettier": "2.8.8",
     "storybook": "^7.0.20",
