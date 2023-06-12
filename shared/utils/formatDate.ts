@@ -1,4 +1,6 @@
-export default function formatDate(date: Date): any {
+import { FormattedDate } from "@/shared/types/formatDateType";
+
+export default function formatDate(date: Date): FormattedDate {
   const dayOfWeek = ["日", "月", "火", "水", "木", "金", "土"];
 
   return {

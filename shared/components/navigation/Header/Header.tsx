@@ -1,6 +1,9 @@
 import React from "react";
+
 import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+
+import { FormattedDate } from "@/shared/types/formatDateType";
 import formatDate from "@/shared/utils/formatDate";
 
 const Flex = styled(Box)({
@@ -8,7 +11,7 @@ const Flex = styled(Box)({
 });
 
 export const Header = () => {
-  const { year, month, day, hour, minutes, dayOfWeek }: any = formatDate(
+  const { year, month, day, hour, minutes, dayOfWeek }:FormattedDate = formatDate(
     new Date(),
   );
 
