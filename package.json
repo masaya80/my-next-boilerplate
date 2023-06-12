@@ -18,7 +18,8 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix shared pages",
-      "prettier -w shared pages"
+      "prettier -w shared pages",
+      "git add"
     ]
   },
   "dependencies": {
