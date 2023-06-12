@@ -3,8 +3,10 @@ import React from "react";
 import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
-import { FormattedDate } from "@/shared/types/formatDateType";
 import formatDate from "@/shared/utils/formatDate";
+
+
+import { FormattedDate } from "@/shared/types/formatDateType";
 
 const Flex = styled(Box)({
   display: "flex",
