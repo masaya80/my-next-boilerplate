@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 module.exports = {
   root: true,
   env: {
@@ -22,6 +23,7 @@ module.exports = {
     },
     ecmaVersion: 2020,
     sourceType: 'module',
+    warnOnUnsupportedTypeScriptVersion: false,
   },
   plugins: ['@typescript-eslint', 'react', 'import'],
   settings: {

@@ -7,11 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "eslint --fix shared pages",
     "prettier:fix": "prettier -w shared pages",
     "prettier:check": "prettier --check shared pages",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "lint:fix",
+      "prettier:fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@apollo/client": "^3.7.15",
@@ -46,6 +60,8 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "2.8.8",
     "storybook": "^7.0.20",
     "typescript": "5.1.3"
