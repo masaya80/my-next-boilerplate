@@ -21,10 +21,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
-      "lint:fix",
-      "prettier:fix",
-      "git add"
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "dependencies": {
